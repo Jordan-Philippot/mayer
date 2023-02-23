@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Large tablets and desktops
+$screen-xxl-min: 1500px;
+
+// Smartphone
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) and (min-height: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin sm-landscape {
+  @media (max-width: #{$screen-lg-min}) and (max-height: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Xxl devices
+@mixin xxl {
+  @media (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+    Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+}
+
+body,
+body[data-theme="light"] {
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #076963;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: rgba(255, 212, 93, 0.5);
+  --color-bg-toggle: #fed151;
+  --color-arrow-filter: invert(0%);
+  --color-background-dropdown: #fff;
+  --color-bg-btn-default: #2e2e2e;
+  --color-bg-btn-default-hover: #212121;
+  --color-btn-default: #ffffff;
+}
+
+body[data-theme="dark"] {
+  --color-text-primary: #f0f0f0;
+  --color-text-secondary: #e6e6e6;
+  --color-bg-primary: #070055;
+  --color-bg-secondary: #01000f;
+  --color-bg-toggle: #7e51fe;
+  --color-arrow-filter: invert(100%);
+  --color-background-dropdown: rgba(36, 0, 103, 0.95);
+  --color-bg-btn-default: #ededed;
+  --color-bg-btn-default-hover: #d7d7d7;
+  --color-btn-default: #303030;
+}
+
+body {
+  background: linear-gradient(180deg, var(--color-bg-primary) 0%, var(--color-bg-secondary) 70%);
+  min-height: 100vh;
+  color: var(--color-text-primary);
+  font-family: "Noto Sans";
+}
+
+h1 {
+  color: var(--color-text-primary);
+}
+
+@import "./bootstrap.scss";
+@import "./bubble.scss";
+@import "./header.scss";
+@import "./home.scss";

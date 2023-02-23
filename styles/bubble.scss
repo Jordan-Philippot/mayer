@@ -1,0 +1,164 @@
+.bubble-bg {
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    background-color: var(--color-bg-toggle);
+    width: 25px;
+    height: 25px;
+}
+.bubble-1 {
+    top: 10vh;
+    left: 4vw;
+    opacity: 0.5;
+    width: 35px;
+    height: 35px;
+}
+.bubble-2 {
+    top: 3vh;
+    left: 20vw;
+    opacity: 0.3;
+    width: 60px;
+    height: 60px;
+}
+.bubble-3 {
+    top: 7vh;
+    left: 55vw;
+    width: 80px;
+    height: 80px;
+    opacity: 0.7;
+}
+.bubble-4 {
+    top: 25vh;
+    left: 10vw;
+}
+
+.bubble-5 {
+    top: 5vh;
+    left: 20vw;
+    width: 65px;
+    height: 65px;
+    opacity: 0.6;
+}
+.bubble-6 {
+    top: 33vh;
+    left: 45vw;
+    width: 80px;
+    height: 80px;
+    opacity: 0.6;
+}
+.bubble-7 {
+    opacity: 0.5;
+    top: 25vh;
+    left: 1vw;
+}
+.bubble-8 {
+    top: 7vh;
+    left: 65vw;
+}
+
+@include sm {
+    .bubble-6 {
+        top: 20vh;
+        left: 40vw;
+    }
+}
+@include md {
+    .bubble-1 {
+        top: 25vh;
+        left: 2vw;
+        opacity: 1;
+        width: 35px;
+        height: 35px;
+    }
+    .bubble-2 {
+        top: 35vh;
+        left: 13vw;
+        opacity: 0.3;
+        width: 50px;
+        height: 50px;
+    }
+    .bubble-3 {
+        top: 5vh;
+        left: 15vw;
+        width: 80px;
+        height: 80px;
+    }
+    .bubble-4 {
+        top: 8vh;
+        left: 35vw;
+    }
+
+    .bubble-5 {
+        top: 50vh;
+        left: 2vw;
+        width: 50px;
+        height: 50px;
+        opacity: 0.5;
+    }
+    .bubble-6 {
+        top: 40vh;
+        left: 20vw;
+        width: 80px;
+        height: 80px;
+        opacity: 0.7;
+    }
+    .bubble-7 {
+        opacity: 0.5;
+        top: -5vh;
+        left: 4vw;
+        width: 35px;
+        height: 35px;
+    }
+    .bubble-8 {
+        top: 7vh;
+        left: 25vw;
+    }
+}
+
+@include lg {
+    .bubble-1 {
+        top: 30vh;
+    }
+    .bubble-2 {
+        top: 45vh;
+    }
+    .bubble-4 {
+        top: 12vh;
+    }
+}
+
+@include xl {
+    .bubble-1 {
+        left: 5vw;
+    }
+    .bubble-2 {
+        left: 15vw;
+    }
+    .bubble-4 {
+        top: 12vh;
+        width: 35px;
+        height: 35px;
+    }
+
+    .bubble-5 {
+        top: 45vh;
+        left: 1vw;
+      
+    }
+    .bubble-6 {
+        top: 30vh;
+        left: 15vw;
+    
+    }
+    .bubble-7 {
+        opacity: 1;
+        top: -5vh;
+        left: 4vw;
+        width: 35px;
+        height: 35px;
+    }
+    .bubble-8 {
+        top: 7vh;
+        left: 25vw;
+    }
+}

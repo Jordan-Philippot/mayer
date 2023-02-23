@@ -1,0 +1,106 @@
+#home {
+    .home-container {
+        min-height: calc(100vh - 100px);
+        padding: 1rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    h1 {
+        font-size: 25px;
+        margin-right: auto;
+    }
+    h3 {
+        font-size: 16px;
+        font-weight: 300;
+    }
+    .btn-default {
+        margin-top: 15px;
+    }
+    .one-side {
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        .illustrations {
+            width: 90%;
+            max-width: 300px;
+            margin: auto;
+        }
+    }
+    .location {
+        margin-right: auto;
+        margin-bottom: 10px;
+        font-style: italic;
+        font-weight: 500;
+        svg {
+            margin-right: 5px;
+            fill: var(--color-text-primary);
+        }
+    }
+}
+
+@include sm {
+    #home {
+        .home-container {
+            padding: 1rem 3rem;
+            min-height: auto;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+        .btn-default {
+            width: auto;
+            padding: 15px 75px;
+            margin-right: auto;
+        }
+    }
+}
+@include md {
+    #home {
+        .home-container {
+            padding: 3rem 2rem;
+            flex-direction: row-reverse;
+            min-height: calc(100vh - 150px);
+        }
+        .one-side {
+            width: 50%;
+            .illustrations {
+                width: 100%;
+                max-width: 500px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+@include xl {
+    #home {
+        .home-container {
+            padding: 3rem 2rem;
+            flex-direction: row-reverse;
+            min-height: calc(100vh - 150px);
+        }
+        h1 {
+            font-size: 40px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        .one-side {
+            width: 50%;
+            .illustrations {
+                width: 100%;
+                max-width: 700px;
+                margin: auto;
+            }
+        }
+    }
+}
